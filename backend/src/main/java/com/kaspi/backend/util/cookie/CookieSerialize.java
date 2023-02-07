@@ -16,7 +16,6 @@ public class CookieSerialize {
         log.info("cookie fileter");
         DefaultCookieSerializer serializer = new DefaultCookieSerializer();
         serializer.setDomainName("localhost");
-        serializer.setUseSecureCookie(true);
         return serializer;
     }
 }
