@@ -2,10 +2,10 @@
 <head>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-      function makeRequest() {
+      function globalSignIn() {
         axios({
           method: 'post',
-          url: 'https://43.200.157.18:8080/api/v1/auth',
+          url: 'http://43.200.157.18:8080/api/v1/auth',
           withCredentials: true,
           data: {
             "id": "test2",
@@ -20,10 +20,10 @@
         });
       }
 
-      function apiv2() {
+      function global_api_v2() {
         axios({
           method: 'get',
-          url: 'https://43.200.157.18:8080/api/v2',
+          url: 'http://43.200.157.18:8080/api/v2',
           withCredentials: true,
         })
         .then(function (response) {
@@ -34,10 +34,10 @@
         });
       }
 
-      function apiv1() {
+      function getCookie() {
         axios({
           method: 'get',
-          url: 'http://localhost:8080/api/v1/test',
+          url: 'http://43.200.157.18:8080/api/v1/cookie',
           withCredentials: true,
         })
         .then(function (response) {
@@ -50,8 +50,8 @@
     </script>
 </head>
 <body>
-<button onclick="makeRequest()">Make Request</button>
-<button onclick="apiv2()">Make Request2</button>
-<button onclick="apiv1()">Make Request1</button>
+<button onclick="globalSignIn()">globalSignIn</button>
+<button onclick="global_api_v2()">global_api_v2</button>
+<button onclick="getCookie()">getCookie</button>
 </body>
 </html>
